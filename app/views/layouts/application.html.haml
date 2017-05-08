@@ -4,12 +4,16 @@
     %meta{:content => 'text/html; charset=UTF-8', :'http-equiv' => 'Content-Type'}/
     %meta{:content => 'width=device-width, initial-scale=1', :name => 'viewport'}/
     %title VeritoTest
-    %link{:href => 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic', :rel => 'stylesheet'}/
+    %link{:href => 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic', :rel => 'stylesheet'}/
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
   %body
-    -#.rect_1024
     .wrapper
-      = yield
-        
+      = render partial: 'includes/header'
+      
+      .main_content
+        .base
+          = yield
+      
+      = render partial: 'includes/footer'

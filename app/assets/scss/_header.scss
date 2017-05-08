@@ -31,13 +31,10 @@
 }
 
 .location_block-link {
-  @include transition_all(opacity .3s);
-  opacity: .64;
-  color: $default_t_color;
-  text-decoration: none;
 
   span {
     &::after {
+      @include transition_all(background .3s);
       content: '';
       display: inline-block;
       vertical-align: middle;
@@ -50,7 +47,9 @@
   }
 
   &:hover {
-    opacity: 1;
+    span::after {
+      background: #29292c;
+    }
   }
 }
 
@@ -159,6 +158,3 @@
 .user_menu-icon {
   @extend .mb;
 }
-
-
-

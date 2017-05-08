@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'verito_icons';
-  src:  url('#{$icomoon-font-path}/verito_icons.eot?g87pf3');
-  src:  url('#{$icomoon-font-path}/verito_icons.eot?g87pf3#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/verito_icons.ttf?g87pf3') format('truetype'),
-    url('#{$icomoon-font-path}/verito_icons.woff?g87pf3') format('woff'),
-    url('#{$icomoon-font-path}/verito_icons.svg?g87pf3#verito_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/verito_icons.eot?bduou8');
+  src:  url('#{$icomoon-font-path}/verito_icons.eot?bduou8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/verito_icons.ttf?bduou8') format('truetype'),
+    url('#{$icomoon-font-path}/verito_icons.woff?bduou8') format('woff'),
+    url('#{$icomoon-font-path}/verito_icons.svg?bduou8#verito_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-vk {
+  &:before {
+    content: $i-vk;
+  }
+}
+.i-fb {
+  &:before {
+    content: $i-fb;
+  }
+}
+.i-in {
+  &:before {
+    content: $i-in;
+  }
+}
 .i-plus {
   &:before {
     content: $i-plus;
