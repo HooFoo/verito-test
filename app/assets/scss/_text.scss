@@ -1,0 +1,53 @@
+// **********  text
+
+.gl_link {
+  text-decoration: none;
+
+  &._link_gray {
+    @include transition_all(color .3s);
+    color: #727377;
+
+    &:hover {
+      color: $default_t_color;
+    }
+  }
+
+  &._link_black {
+    @include transition_all(color .3s);
+    color: $default_t_color;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+.fs_i {
+  font-style: italic;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.mob_hidden {
+  @include respond-to-max($resp_step_2) {
+    display: none !important;
+  }
+}

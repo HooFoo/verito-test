@@ -1,0 +1,107 @@
+//************  buttons
+
+.btn_v1 {
+  height: 40px;
+  min-width: 40px;
+  text-align: center;
+
+  @include respond-to-min($resp_step_2) {
+    height: 46px;
+    min-width: 46px;
+  }
+
+  &.search_btn {
+    display: block;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 500;
+
+    @include respond-to-max($resp_step_2) {
+      background: none !important;
+
+      .user_menu-icon {
+        font-size: 22px;
+        color: #b9b9c1;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      margin-left: 15px;
+
+      .user_menu-icon {
+        font-size: 20px;
+      }
+    }
+
+    .user_menu-text {
+      text-transform: uppercase;
+    }
+  }
+
+  &.sell_btn {
+    display: block;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 500;
+
+    .user_menu-icon {
+      font-size: 14px;
+    }
+
+    .user_menu-text {
+      text-transform: uppercase;
+    }
+
+    .user_menu-icon {
+      color: #dbf1f8;
+      font-size: 18px;
+
+      @include respond-to-min($resp_step_2) {
+        color: #5cbee0;
+        font-size: 14px;
+        margin-right: 3px;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      padding: 0 23px;
+    }
+  }
+}
+
+.green_btn {
+  color: #fff;
+}
+
+.btn_red {
+  color: #fff;
+  background: #f46b65;
+}
+
+.gray_btn {
+  @include transition_all(background .3s, color .3s);
+  background: #f0f0f6;
+  color: #bdbdc5;
+
+  &:hover {
+    background: #e0e0e5;
+    color: #a3a3a9;
+  }
+}
+
+.blue_btn {
+  @include transition_all(background .3s, color .3s);
+  background: #009ace;
+  color: #fff;
+
+  &:hover {
+    background: #0091c2;
+  }
+
+  .user_menu-icon {
+    color: #5cbee0;
+  }
+}
+
