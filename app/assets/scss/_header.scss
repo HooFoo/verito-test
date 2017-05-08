@@ -1,0 +1,164 @@
+//*************************** header
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  line-height: 40px;
+  padding-top: 20px;
+
+  .section_inner {
+    max-width: 1216px;
+    position: relative;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    line-height: 46px;
+    padding-top: 33px;
+
+    .section_inner {
+      padding-left: 120px;
+    }
+  }
+}
+
+.location_block {
+
+  @include respond-to-min($resp_step_2) {
+    float: left;
+  }
+}
+
+.location_block-link {
+  @include transition_all(opacity .3s);
+  opacity: .64;
+  color: $default_t_color;
+  text-decoration: none;
+
+  span {
+    &::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      width: 30px;
+      height: 2px;
+      margin-left: 12px;
+      background: #bebebf;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.logo_block {
+  float: left;
+  padding-left: 10px;
+}
+
+.logo {
+  @extend .mb;
+  position: relative;
+  width: 135px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    width: 210px;
+    margin-right: 72px;
+  }
+}
+
+.lang_switcher {
+  float: left;
+  padding-left: 60px;
+}
+
+.callback_block {
+  float: right;
+}
+
+// *********  menu
+
+.user_menu {
+  @extend %clearfix;
+  float: right;
+
+  > li {
+    float: left;
+    padding-left: 10px;
+  }
+}
+
+.user_menu-item {
+
+  @include respond-to-max($resp_step_2) {
+    .user_menu-icon {
+      font-size: 24px;
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    &._menu_toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+
+      .user_menu-link {
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+.user_menu-link {
+  float: left;
+  padding: 0 10px;
+
+  .user_menu-text {
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .user_menu-icon {
+    @include transition_all(color .3s);
+    color: #b9b9c1;
+    font-size: 20px;
+
+    + .user_menu-text {
+      margin-left: 8px;
+    }
+
+    &.i-menu {
+      color: #008ab9;
+
+      @include respond-to-min($resp_step_2) {
+        color: #91a8af;
+      }
+    }
+  }
+
+  &:hover {
+    .user_menu-icon {
+      color: #89898f;
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding: 0 6px;
+  }
+}
+
+.user_menu-icon {
+  @extend .mb;
+}
+
+
+

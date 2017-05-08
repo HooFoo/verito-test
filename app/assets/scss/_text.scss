@@ -1,0 +1,23 @@
+// **********  text
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+.mob_hidden {
+  @include respond-to-max($resp_step_2) {
+    display: none !important;
+  }
+}

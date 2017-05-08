@@ -1,2 +1,30 @@
-%h1 Index#index
-%p Find me in app/views/index/index.html.haml
+.header
+  .section_inner
+    .logo_block
+      %a.logo
+        %img{:src => '/assets/logo.png', :class => 'logo_img'}
+      
+    .location_block.mob_hidden
+      %a.location_block-link{:href => '#'}
+        %span Санкт-Петербург
+      
+    %ul.user_menu
+      %li.mob_hidden
+        %a.user_menu-link{:href => '#'}
+          %span.user_menu-icon.i-heart
+          %span.user_menu-text 12
+      %li.mob_hidden
+        %a.user_menu-link{:href => '#'}
+          %span.user_menu-icon.i-user
+      %li
+        %a.btn_v1.search_btn.gray_btn{:href => '#'}
+          %span.user_menu-icon.i-search
+      %li
+        %a.btn_v1.sell_btn.blue_btn{:href => '#'}
+          %span.user_menu-icon.i-plus
+          %span.user_menu-text.mob_hidden хочу продать
+      %li.user_menu-item._menu_toggle
+        %a.user_menu-link{:href => '#'}
+          %span.user_menu-icon.i-menu
+          
+            
