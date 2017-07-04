@@ -1,2 +1,13 @@
-%h1 Index#index
-%p Find me in app/views/index/index.html.erb
+%h1 Heading
+%a#change-pass_open{ :href => '#' } Сменить пароль
+.change-pass_wrapper
+	%form.change-pass_box
+		.change-pass_heading
+			%h5 Смена пароля
+			= image_tag("cross.png", class: "change-pass_cross")
+		.change-pass_field
+			%h6 Новый пароль
+			%input{ :type => "password", :placeholder => "Введите пароль", :name => "newpass" }
+		.change-pass_field
+			%input{ :type => "password", :placeholder => "Пароль повторно", :name => "repeatpass" }
+		%input{ :type => "submit", :value => "Сменить" }
